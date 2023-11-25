@@ -4,7 +4,7 @@ const userName = "Cagatay";
 let age = 30;
 
 age = 30;
-
+/* 
 //bad works sometimes
 function add(a:number, b:number){
     let result; // or var result;
@@ -26,4 +26,24 @@ if(age > 20){
     var isOld = false;
 }
 
-console.log(isOld);
+console.log(isOld); */
+
+//Arrow functions
+const add = (a: number, b: number) => a + b;
+
+/* const printOutput = (output:string|number) => {
+    console.log(output);
+} */
+
+//shorter version of above
+const printOutput: (output: number | string) => void = (output) =>
+  console.log(output);
+// () => {}
+
+const btn = document.querySelector("button");
+
+if(btn){
+    btn.addEventListener("click", event =>{console.log(event)});
+}
+
+printOutput(add(12, 34));
