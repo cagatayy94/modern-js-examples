@@ -58,3 +58,20 @@ printOutput(addWithDefault(undefined, 55));
 //do this instead
 const addWithDefault2 = (a: number, b: number = 19) => a + b;
 printOutput(addWithDefault2(10));
+
+//The spread operator
+const hobbies = ["sports", "cookie"];
+const hobbiesOutdoor = ["biking", "climbing"];
+const activeHobbies = ["hiking", ...hobbiesOutdoor];
+
+activeHobbies.push(...hobbies);
+
+const person = {
+  name: "cagatay",
+  age: 23,
+};
+
+//copies only reference
+const copiedPersonReference = person;
+
+const copiedNewPerson = { ...person };
