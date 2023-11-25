@@ -29,13 +29,13 @@ if(age > 20){
 console.log(isOld); */
 
 //Arrow functions
-const add = (a: number, b: number) => a + b;
-
+/* const add = (a: number, b: number) => a + b;
+ */
 /* const printOutput = (output:string|number) => {
     console.log(output);
 } */
 
-//shorter version of above
+/* //shorter version of above
 const printOutput: (output: number | string) => void = (output) =>
   console.log(output);
 // () => {}
@@ -48,16 +48,16 @@ if (btn) {
   });
 }
 
-printOutput(add(12, 34));
+printOutput(add(12, 34)); */
 
 //default argument
 //Arrow functions
-const addWithDefault = (a: number = 10, b: number) => a + b;
-printOutput(addWithDefault(undefined, 55));
+/* const addWithDefault = (a: number = 10, b: number) => a + b;
+printOutput(addWithDefault(undefined, 55)); */
 
 //do this instead
-const addWithDefault2 = (a: number, b: number = 19) => a + b;
-printOutput(addWithDefault2(10));
+/* const addWithDefault2 = (a: number, b: number = 19) => a + b;
+printOutput(addWithDefault2(10)); */
 
 //The spread operator
 const hobbies = ["sports", "cookie"];
@@ -75,3 +75,14 @@ const person = {
 const copiedPersonReference = person;
 
 const copiedNewPerson = { ...person };
+
+//rest parameters
+const add = (...numbers: number[]) => {
+  return numbers.reduce((currentResult, currentValue) => {
+    return currentResult + currentValue;
+  }, 0);
+};
+
+const addNumbers = add(5, 10, 15, 20, 25);
+
+console.log(addNumbers);
