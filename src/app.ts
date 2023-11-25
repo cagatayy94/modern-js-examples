@@ -56,6 +56,5 @@ const addWithDefault = (a: number = 10, b: number) => a + b;
 printOutput(addWithDefault(undefined, 55));
 
 //do this instead
-const addWithDefault2 = (a: number, b: number=19) => a + b;
+const addWithDefault2 = (a: number, b: number = 19) => a + b;
 printOutput(addWithDefault2(10));
-
