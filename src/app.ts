@@ -1,9 +1,9 @@
 const userName = "Cagatay";
 //userName = "nasıl";
 
-let age = 30;
+//let age = 30;
 
-age = 30;
+//age = 30;
 /* 
 //bad works sometimes
 function add(a:number, b:number){
@@ -67,7 +67,7 @@ const activeHobbies = ["hiking", ...hobbiesOutdoor];
 activeHobbies.push(...hobbies);
 
 const person = {
-  name: "cagatay",
+  username: "cagatay",
   age: 23,
 };
 
@@ -86,3 +86,10 @@ const add = (...numbers: number[]) => {
 const addNumbers = add(5, 10, 15, 20, 25);
 
 console.log(addNumbers);
+
+//array object destructuring
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobbies, hobby1, hobby2);
+
+//object destructuring
+const { username, age } = person;
