@@ -19,9 +19,21 @@ class Department {
     console.log(this.employees.length);
     console.log(this.employees);
   }
+} 
+
+class ITDepartment extends Department {
+  constructor(id: string, public admins:string[]){
+    super(id, 'IT');
+    this.calculate();
+  }
+
+  calculate() {
+    console.log(12+12);
+  }
+
 }
 
-const itDepartment = new Department("h1", "IT");
+const itDepartment = new ITDepartment("h1", ["asd", "2asd"]);
 
 console.log(itDepartment);
 itDepartment.describe();
@@ -34,3 +46,5 @@ itDepartment.addEmployee("max");
 //itDepartment.employees[2] ="selin";
 
 itDepartment.printEmployeeInfo();
+
+console.log("asdasd");
